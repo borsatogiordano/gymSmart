@@ -1,7 +1,7 @@
 import { defineConfig } from "eslint/config";
 import globals from "globals";
-import js from "@eslint/js";
 import tseslint from "typescript-eslint";
+import ts from "typescript";
 
 export default defineConfig([
   { files: ["**/*.{js,mjs,cjs,ts}"] },
@@ -11,8 +11,8 @@ export default defineConfig([
   },
   {
     files: ["**/*.{js,mjs,cjs,ts}"],
-    plugins: { js },
-    extends: ["js/recommended"],
+    plugins: { ts },
+    extends: ["ts/recommended"],
   },
   tseslint.configs.recommended,
 ]);
